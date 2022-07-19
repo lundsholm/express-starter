@@ -1,9 +1,9 @@
+import "./utils/dotenv";
 import "./utils/moduleAlias";
 import express from "express";
-import { purple } from "@/utils/chalk";
-import { log } from "./utils/debug";
-import dotenv from "dotenv";
-dotenv.config();
+import { blue, purple } from "@/utils/chalk";
+import { log } from "@/utils/debug";
+
 const app = express();
 app.use(express.json());
 
@@ -22,4 +22,6 @@ app.use(async (req, res, next) => {
   res.json({ message: "Hello world" });
 });
 
-app.listen(3000);
+app.listen(process.env.PORT, () => {
+  log(blue(`[index] server is listening on port ${process.env.PORT}`));
+});
