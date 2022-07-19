@@ -20,9 +20,11 @@
   },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
+    "@types/compression": "^1.7.2",
     "@types/express": "^4.17.13",
     "@types/module-alias": "^2.0.1",
     "@types/node": "^18.0.6",
+    "compression": "^1.7.4",
     "concurrently": "^7.3.0",
     "nodemon": "^2.0.19",
     "ts-node": "^10.9.1",
