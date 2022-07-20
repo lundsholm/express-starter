@@ -1,7 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { ApiError } from "@/utils/api-error";
-import { bold, green, red } from "@/utils/chalk";
-import { log } from "@/utils/debug";
+import { log, bold, green, red } from "@/utils/debug";
 
 export const apiErrorHandler = <T extends Error>(err: T, req: Request, res: Response, next: NextFunction) => {
   if (err instanceof ApiError) {

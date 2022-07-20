@@ -6,8 +6,7 @@ import express from "express";
 import compression from "compression";
 import morgan from "morgan";
 import { createStream } from "rotating-file-stream";
-import { blue } from "@/utils/chalk";
-import { log } from "@/utils/debug";
+import { log, blue } from "@/utils/debug";
 import { apiErrorHandler, catchAllHandler } from "@/middleware/errorHandlers";
 import { indexRouter } from "./routes";
 

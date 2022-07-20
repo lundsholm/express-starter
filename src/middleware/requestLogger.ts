@@ -1,6 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { blue, bold, orange, underline, yellow } from "@/utils/chalk";
-import { log } from "@/utils/debug";
+import { log, bold, orange, underline, yellow } from "@/utils/debug";
 
 export const requestLogger = function (req: Request, res: Response, next: NextFunction) {
   let method = bold(req.method);
